@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/hj/.minikube'
+let g:netrw_dirhist_2='/Users/hj/.tmux'
+let g:netrw_dirhist_3='/Users/hj'
+let g:netrw_dirhist_4='/Users/hj/workspace/techverito.com/config/deploy'
+let g:netrw_dirhist_5='/Users/hj/.ssh'
+let g:netrw_dirhist_6='/Users/hj/workspace/techverito.com/config/deploy'
+let g:netrw_dirhist_7='/Users/hj/workspace/techverito.com/config'
+let g:netrw_dirhist_8='/Users/hj/workspace/techverito.com/config/deploy'

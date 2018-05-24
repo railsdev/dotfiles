@@ -1,0 +1,18 @@
+
+" Ruby Rails
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'honza/vim-snippets'
+Plug 'garbas/vim-snipmate'
+
+Plug 'jiangmiao/auto-pairs'
+Plug 'ervandew/supertab'
+Plug 'janko-m/vim-test'
+
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug '/Users/hj/.fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'pbogut/fzf-mru.vim'
+
+Plug 'morhetz/gruvbox'
