@@ -59,11 +59,12 @@ augroup vimrcEx
   " ALE linting events
   if g:has_async
     set updatetime=1000
-    let g:ale_lint_on_text_changed = 0
-    autocmd CursorHold * call ale#Lint()
-    autocmd CursorHoldI * call ale#Lint()
-    autocmd InsertEnter * call ale#Lint()
-    autocmd InsertLeave * call ale#Lint()
+    let g:ale_set_highlights = 0
+    " let g:ale_lint_on_text_changed = 0
+    " autocmd CursorHold * call ale#Lint()
+    " autocmd CursorHoldI * call ale#Lint()
+    " autocmd InsertEnter * call ale#Lint()
+    " autocmd InsertLeave * call ale#Lint()
   else
     echoerr "The thoughtbot dotfiles require NeoVim or Vim 8"
   endif
@@ -82,6 +83,7 @@ set expandtab
 " Display extra whitespace
 set list listchars=trail:·
 set list listchars=nbsp:·
+set listchars=tab:\│\ ,trail:-,extends:>,precedes:<,nbsp:+
 " set list listchars=tab:»·,trail:·,nbsp:·
 
 " Use one space, not two, after punctuation.

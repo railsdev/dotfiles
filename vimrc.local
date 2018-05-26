@@ -56,7 +56,11 @@ if exists("+undofile")
 endif
 
 " let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch'  }
-" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme='powerlineish'
+let g:airline#extensions#syntastic#enabled = 1
+set laststatus=2
 
 nnoremap <Leader><CR> :nohlsearch<cr>
 nnoremap <Leader>, :bp<CR> 
@@ -109,10 +113,12 @@ let g:fzf_colors =
 " previous-history instead of down and up. If you don't like the change,
 " explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
-nnoremap <silent> <C-p> :call fzf#run({
-      \   'down': '40%',
-      \   'sink': 'botright split' })<CR>
+" let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" nnoremap <silent> <C-p> :call fzf#run({
+"       \   'down': '40%',
+"       \   'sink': 'botright split' })<CR>
 
+nnoremap <silent> <C-p> :GFiles<CR>
 function! s:buflist()
   redir => ls
   silent ls
@@ -154,3 +160,19 @@ augroup ft_rb
 augroup END
 
 set shell=bash
+
+
+" deoplete options
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+
+set completeopt+=noselect
+
+" Path to python interpreter for neovim
+let g:python3_host_prog  = '/usr/local/bin/python3'
+" Skip the check of neovim module
+let g:python3_host_skip_check = 1
+
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
